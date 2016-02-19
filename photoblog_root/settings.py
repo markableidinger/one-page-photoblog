@@ -5,7 +5,15 @@ import json
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CREDENTIALS = json.load(open(os.path.join(BASE_DIR, 'secrets.json'), 'r'))
+
 SECRET_KEY = CREDENTIALS['secret_key']
+
+# Necessary stuff for django storages with s3
+AWS_ACCESS_KEY_ID = CREDENTIALS['aws_access_key']
+AWS_SECRET_ACCESS_KEY = CREDENTIALS['aws_secret_key']
+AWS_STORAGE_BUCKET_NAME = CREDENTIALS['s3_bucket_name']
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
 
 DEBUG = True
 
