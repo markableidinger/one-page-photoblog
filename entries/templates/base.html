@@ -1,0 +1,12 @@
+{% load staticfiles %}
+<html ng-app="blog">
+    <head>
+        <title>
+            Mark Ableidinger Photoblog
+        </title>
+    </head>
+    <body>
+        <script src="{% static 'js/angular.min.js' %}"></script>
+        {% block content %}
+    </body>
+</html>

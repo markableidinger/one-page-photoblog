@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from entries.views import EntryAPIView
+from entries.views import EntryAPIView, HomeView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', EntryAPIView.as_view(), name='entries')
+    url(r'^entry_list/', EntryAPIView.as_view(), name='entries'),
+    url(r'^$', HomeView.as_view(), name='home')
 ]
