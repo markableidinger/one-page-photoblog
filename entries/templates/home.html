@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-{% load staticfiles %}
-{% block content %}
-<script src="js/blog.js"></script>
-<h1> Hi </h1>
-{% for entry in object_list %}
-<img src="{{ entry.photo_file.url }}">
-{% endfor %}
-{% endblock %}

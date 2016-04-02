@@ -2,7 +2,6 @@
 from django.db import models
 from django.contrib.postgres.fields import JSONField
 
-
 class PhotoBlogEntry(models.Model):
     """The model for a blog entry."""
 
